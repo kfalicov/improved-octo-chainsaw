@@ -1,0 +1,14 @@
+GameEngine/Debug/
+GameEngine/Release/
+GameEngine/src/Debug/
+GameEngine/src/Release/
+GameEngine/.vs/
+*.exe
+*.db
+*.pdb
+*.obj
+*.tlog
+*.idb
+*.opendb
+*.suo
+*.log
