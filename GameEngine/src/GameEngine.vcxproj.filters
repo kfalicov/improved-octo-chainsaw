@@ -34,15 +34,6 @@
     <ClCompile Include="Exception.cpp">
       <Filter>Source Files\runtime</Filter>
     </ClCompile>
-    <ClCompile Include="GamePadHandler.cpp">
-      <Filter>Source Files\input</Filter>
-    </ClCompile>
-    <ClCompile Include="InputHandler.cpp">
-      <Filter>Source Files\input</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyboardHandler.cpp">
-      <Filter>Source Files\input</Filter>
-    </ClCompile>
     <ClCompile Include="MouseHandler.cpp">
       <Filter>Source Files\input</Filter>
     </ClCompile>
@@ -57,6 +48,9 @@
     </ClCompile>
     <ClCompile Include="MeshEntity.cpp">
       <Filter>Source Files\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Source Files\input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,15 +87,6 @@
     <ClInclude Include="Exception.h">
       <Filter>Header Files\runtime</Filter>
     </ClInclude>
-    <ClInclude Include="GamePadHandler.h">
-      <Filter>Header Files\input</Filter>
-    </ClInclude>
-    <ClInclude Include="InputHandler.h">
-      <Filter>Header Files\input</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyboardHandler.h">
-      <Filter>Header Files\input</Filter>
-    </ClInclude>
     <ClInclude Include="MouseHandler.h">
       <Filter>Header Files\input</Filter>
     </ClInclude>
@@ -116,6 +101,9 @@
     </ClInclude>
     <ClInclude Include="MeshEntity.h">
       <Filter>Header Files\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>Header Files\input</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

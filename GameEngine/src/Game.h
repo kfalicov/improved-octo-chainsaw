@@ -2,7 +2,7 @@
 #define _GAME_H
 #include "Renderer.h"
 #include "Loader.h"
-#include "InputHandler.h"
+#include "EventManager.h"
 #include "StaticShader.h"
 #include "TexturedEntity.h"
 #include "Util.h"
@@ -44,7 +44,7 @@ public:
 private:
 	int _width;
 	int _height;
-	InputHandler* _inputHandler;
+	EventManager* _EventManager;
 	Camera* _camera;
 
 	Renderer* _renderer;

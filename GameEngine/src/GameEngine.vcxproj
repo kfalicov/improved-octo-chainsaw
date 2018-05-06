@@ -126,9 +126,7 @@
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GamePadHandler.cpp" />
-    <ClCompile Include="InputHandler.cpp" />
-    <ClCompile Include="KeyboardHandler.cpp" />
+    <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mesh.cpp" />
@@ -147,9 +145,7 @@
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="GamePadHandler.h" />
-    <ClInclude Include="InputHandler.h" />
-    <ClInclude Include="KeyboardHandler.h" />
+    <ClInclude Include="EventManager.h" />
     <ClInclude Include="Loader.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="MeshEntity.h" />

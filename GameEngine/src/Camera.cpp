@@ -32,7 +32,7 @@ float Camera::getYaw()
 	return _yaw;
 }
 
-void Camera::move(InputHandler* handler)
+void Camera::move(EventManager* handler)
 {
 	// TODO: Handle camera movement
 }

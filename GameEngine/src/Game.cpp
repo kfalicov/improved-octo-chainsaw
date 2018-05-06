@@ -5,7 +5,7 @@
 Game::Game(int width, int height) : 
 	_width(width), 
 	_height(height),
-	_inputHandler(&InputHandler::getInputHandler())
+	_EventManager(&EventManager::getEventManager())
 {
 	_entities = new std::vector<Entity*>();
 	_loader = new Loader();
@@ -145,6 +145,6 @@ void Game::destroyGame()
 	_entities = NULL;
 	_renderer = NULL;
 	_camera = NULL;
-	_inputHandler->destroyInputHandler();
-	_inputHandler = NULL;
+	_EventManager->destroyEventManager();
+	_EventManager = NULL;
 }
