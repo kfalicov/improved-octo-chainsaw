@@ -9,46 +9,30 @@
 class Camera
 {
 public:
-	/*
-		Creates a new camera
-		@param position The initial position of the camera
-	*/
+
+	//	Creates a new camera with initial position
 	Camera(glm::vec3 position);
 
-	/*
-		Destroys the camera	
-	*/
+	//	Creates a new camera with initial position and angle
+	Camera(glm::vec3 position, float pitch, float roll, float yaw);
+
+	//	Destructor
 	~Camera();
 
-	/*
-		Returns the position of the camera
-		@return Returns the position of the camera
-	*/
+	//	Returns the position of the camera
 	glm::vec3 getPosition();
 
-	/*
-		Returns the pitch of the camera
-		@return Returns the position of the camera
-	*/
+	//	Returns the pitch (rotation around an imaginary line horizontal to the screen)
 	float getPitch();
 
-	/*
-		Returns the yaw of the camera
-		@return Returns the yaw of the camera
-	*/
+	//	Returns the yaw (rotation around an imaginary line vertical to the screen)
 	float getYaw();
 
-	/*
-		Returns the roll of the camera
-		@return Returns the roll of the camera
-	*/
+	//	Returns the roll (rotation around an imaginary line going into the screen)
 	float getRoll();
 
-	/*
-		Moves the camera
-		@param handler A pointer to the input handler
-	*/
-	void move(EventManager* handler); 
+	//	moves the camera using inputs from the event manager
+	void move(EventManager* manager); 
 
 private:
 	glm::vec3 _position;

@@ -117,6 +117,7 @@ void Game::update()
 		Entity* entity = _entities->at(i);
 		entity->update();
 	}
+	_camera->move(_EventManager);
 }
 
 void Game::render()

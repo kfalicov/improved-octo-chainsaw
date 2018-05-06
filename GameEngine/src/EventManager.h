@@ -40,6 +40,12 @@ public:
 	double getX();
 	double getY();
 
+	//	returns the change in mouse cursor coordinates from the last
+	double getDX();
+	double getDY();
+
+	void disposeDeltas();
+
 protected:
 
 private:

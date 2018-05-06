@@ -34,11 +34,18 @@ EventManager& EventManager::getEventManager()
 		//	init keyboard callbacks
 		glfwSetKeyCallback(glfwGetCurrentContext(), *keyCallback);
 
+		//	sets mouse cursor to center of the window
+		int width, height;
+		glfwGetWindowSize(glfwGetCurrentContext(), &width, &height);
+		glfwSetCursorPos(glfwGetCurrentContext(), width / 2, height / 2);
+
 		//	init mouse callbacks
 		glfwSetCursorPosCallback(glfwGetCurrentContext(), *cursorPosCallback);
 		glfwSetMouseButtonCallback(glfwGetCurrentContext(), *mouseButtonCallback);
 		glfwSetScrollCallback(glfwGetCurrentContext(), *scrollCallback);
-		glfwSetInputMode(glfwGetCurrentContext(), GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+
+		//	hide the mouse pointer and prevent it from leaving the screen
+		glfwSetInputMode(glfwGetCurrentContext(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 		handler = new EventManager();		
 	}
 	return *handler;
@@ -73,11 +80,11 @@ void EventManager::keyCallback(GLFWwindow* window, int key, int scancode, int ac
 }
 
 void EventManager::cursorPosCallback(GLFWwindow* window, double x, double y) {
-	_dx = x - _x;
+	_dx = _x - x;
 	_dy = y - _y;
 	_x = x;
 	_y = y;
-	std::cout << _dx << ", " << _dy << std::endl;
+	//	std::cout << _dx << ", " << _dy << std::endl;
 }
 
 void EventManager::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
@@ -114,4 +121,19 @@ double EventManager::getX()
 double EventManager::getY()
 {
 	return _y;
+}
+
+double EventManager::getDX()
+{
+	return _dx;
+}
+double EventManager::getDY()
+{
+	return _dy;
+}
+
+void EventManager::disposeDeltas()
+{
+	_dx = 0.;
+	_dy = 0.;
 }

@@ -34,9 +34,6 @@
     <ClCompile Include="Exception.cpp">
       <Filter>Source Files\runtime</Filter>
     </ClCompile>
-    <ClCompile Include="MouseHandler.cpp">
-      <Filter>Source Files\input</Filter>
-    </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Source Files\loader</Filter>
     </ClCompile>
@@ -86,9 +83,6 @@
     </ClInclude>
     <ClInclude Include="Exception.h">
       <Filter>Header Files\runtime</Filter>
-    </ClInclude>
-    <ClInclude Include="MouseHandler.h">
-      <Filter>Header Files\input</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
       <Filter>Header Files\loader</Filter>

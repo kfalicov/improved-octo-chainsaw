@@ -64,13 +64,13 @@ static void createProjectionMatrix(glm::mat4* matrix)
 static glm::mat4 createViewMatrix(Camera* camera)
 {
 	glm::mat4* viewMatrix = new glm::mat4(1);
-	glm::rotate(*viewMatrix,(float)glm::radians(camera->getPitch()), glm::vec3(1, 0, 0));
-	glm::rotate(*viewMatrix, (float)glm::radians(camera->getYaw()), glm::vec3(0, 1, 0));
-	glm::rotate(*viewMatrix, (float)glm::radians(camera->getRoll()), glm::vec3(0, 0, 1));
+	*viewMatrix = glm::rotate(*viewMatrix,(float)glm::radians(camera->getPitch()), glm::vec3(1, 0, 0));
+	*viewMatrix = glm::rotate(*viewMatrix, (float)glm::radians(camera->getYaw()), glm::vec3(0, 1, 0));
+	*viewMatrix = glm::rotate(*viewMatrix, (float)glm::radians(camera->getRoll()), glm::vec3(0, 0, 1));
 
 	glm::vec3 cameraPos = camera->getPosition();
 	glm::vec3 negativeCameraPos = glm::vec3(-cameraPos.x, -cameraPos.y, -cameraPos.z);
-	glm::translate(*viewMatrix, negativeCameraPos);
+	*viewMatrix = glm::translate(*viewMatrix, negativeCameraPos);
 	return *viewMatrix;
 
 }

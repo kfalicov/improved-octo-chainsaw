@@ -39,6 +39,6 @@ void TexturedEntity::update()
 	// tmp
 	//std::cout << "TEST rotation code\n";
 	//setRotationX(getRotationX() + 0.4f);
-	setRotationY(getRotationY() + 0.4f);
-	setRotationZ(getRotationZ() + 0.8f);
+	//setRotationY(getRotationY() + 0.4f);
+	//setRotationZ(getRotationZ() + 0.8f);
 }
