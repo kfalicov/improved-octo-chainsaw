@@ -1,0 +1,1 @@
+This repository is a way for me to play around with a 3D game engine in C++.
